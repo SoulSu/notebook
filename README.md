@@ -5,7 +5,7 @@
 
 * [[Nginx] 负载均衡实践](Linux/Nginx%20Load%20Balancing.md)
 * [[Nginx] 服务健康检查](Linux/Nginx%20Health%20Checks.md)
-* [[Nginx] 访问控制](Linux/Nginx%20Health%20Checks.md)
+* [[Nginx] 访问控制](Linux/Nginx访问控制.md)
 
 
 
