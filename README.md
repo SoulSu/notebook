@@ -3,6 +3,10 @@
 
 ### Linux 笔记
 
+#### Linux
+
+* [Linux 终端快捷键](Linux/Linux终端快捷键.md)
+
 #### Nginx
 
 * [[Nginx] 负载均衡实践](Linux/Nginx%20Load%20Balancing.md)
