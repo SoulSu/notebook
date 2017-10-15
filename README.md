@@ -5,7 +5,7 @@
 
 #### Linux
 
-* [Linux 终端快捷键](Linux/Linux终端快捷键.md)
+* [[Linux] 终端快捷键](Linux/Linux终端快捷键.md)
 
 #### Nginx
 
