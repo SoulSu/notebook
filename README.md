@@ -6,6 +6,7 @@
 #### Linux
 
 * [[Linux] 终端快捷键](Linux/Linux终端快捷键.md)
+* [Centos7 安装网易云音乐](Linux/Centos7安装网易云音乐.md)
 
 #### Nginx
 
@@ -17,6 +18,12 @@
 
 * [[Docker] 操作终结](Linux/Docker操作总结.md)
 
+
+### 编程语言
+
+#### Golang
+
+* [[Beego] orm 使用注意](编程语言/Beego-orm-使用注意.md)
 
 ### Book 书籍
 
