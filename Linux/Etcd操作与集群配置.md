@@ -67,3 +67,4 @@ etcd --name infra2 --initial-advertise-peer-urls http://127.0.0.1:2400 \
   --initial-cluster-state new
 ```
 
+送上一个简单的[启动脚本](https://github.com/SoulSu/notebook/tree/master/Linux/ext/etcd)
