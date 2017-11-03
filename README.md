@@ -7,6 +7,7 @@
 
 * [[Linux] 终端快捷键](Linux/Linux终端快捷键.md)
 * [Centos7 安装网易云音乐](Linux/Centos7安装网易云音乐.md)
+* [命令 [systemctl] 使用](Linux/命令systemctl使用.md)
 
 #### Nginx
 
@@ -16,8 +17,11 @@
 
 #### Docker
 
-* [[Docker] 操作终结](Linux/Docker操作总结.md)
+* [[Docker] 操作总结](Linux/Docker操作总结.md)
 
+#### 服务
+
+* [[Etcd] 操作与集群配置](Linux/Etcd操作与集群配置.md)
 
 ### 编程语言
 
