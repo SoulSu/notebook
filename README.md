@@ -6,8 +6,9 @@
 #### Linux
 
 * [[Linux] 终端快捷键](Linux/Linux终端快捷键.md)
-* [Centos7 安装网易云音乐](Linux/Centos7安装网易云音乐.md)
+* [[Centos7] 安装网易云音乐](Linux/Centos7安装网易云音乐.md)
 * [命令 [systemctl] 使用](Linux/命令systemctl使用.md)
+* [[Ubuntu] 系统安装后初始化](Linux/ext/ubuntu/init-install)
 
 #### Nginx
 
