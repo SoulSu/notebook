@@ -25,6 +25,85 @@ notebook: Linux
 
 ### Etcd restful 接口
 
+> 启动一个单机的 etcd　直接执行　`etcd`
+
+> 练习使用`restful` 接口调用
+
+[Postman请求封装](https://documenter.getpostman.com/view/209548/etcd/77iZMRZ)
+
+
+
+### Golang 调用 Etcd Api
+
+```golang
+package main
+
+import (
+	"fmt"
+	"os"
+	"os/signal"
+	"syscall"
+	"time"
+
+	"github.com/coreos/etcd/clientv3"
+	"golang.org/x/net/context"
+	"google.golang.org/grpc/grpclog"
+)
+
+func main() {
+
+	clientv3.SetLogger(grpclog.NewLoggerV2(os.Stderr, os.Stderr, os.Stderr))
+
+	cli, err := clientv3.New(clientv3.Config{
+		Endpoints:   []string{"localhost:2379", "localhost:2389", "localhost:2399", "localhost:2409"},
+		DialTimeout: 5 * time.Second,
+		Username:    "root",
+		Password:    "123456",
+	})
+	if err != nil {
+		panic(err.Error())
+	}
+	defer cli.Close()
+
+	//fmt.Printf("%#v\n", cli)
+	cli.Put(context.TODO(), "/foo1", "go-key1-val")
+	resp, err := cli.Get(context.TODO(), "/foo1")
+	//fmt.Println(resp, err)
+	for k, v := range resp.Kvs {
+		fmt.Printf("--- %#v, %v %v\n", k, string(v.Key), string(v.Value))
+	}
+
+	go func() {
+		fmt.Println("in change watcher data")
+
+		timer := time.NewTicker(time.Second * 2)
+		defer timer.Stop()
+
+		for {
+			select {
+			case <-timer.C:
+				fmt.Println("get timer")
+				cli.Put(context.TODO(), "/foo1", fmt.Sprintf("go-timer-%d", time.Now().Unix()))
+			}
+		}
+
+	}()
+
+	go func() {
+		fmt.Println("in watcher.......")
+		wch := cli.Watch(context.TODO(), "/foo1")
+		for {
+			dwch := <-wch
+			fmt.Printf("get new watch data =>%#v\n", dwch)
+		}
+	}()
+
+	sn := make(chan os.Signal)
+	signal.Notify(sn, syscall.SIGKILL)
+	<-sn
+}
+
+```
 
 
 
@@ -76,3 +155,5 @@ etcd --name infra2 --initial-advertise-peer-urls http://127.0.0.1:2400 \
 ```
 
 送上一个简单的[启动脚本](https://github.com/SoulSu/notebook/tree/master/Linux/ext/etcd)
+
+
