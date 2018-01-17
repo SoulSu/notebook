@@ -22,7 +22,7 @@
         - `@within()` **类**级别的注解匹配
         - `@args()`　**方法**参数匹配 
         - `@target()` **类**
-        - `excution(arg1 arg2 arg3)` arg1:访问限定符,arg2:方法返回值,arg3:包路径 (public * com.a.b)
+        - `excution(arg1 arg2 arg3)` arg1:访问限定符,arg2:方法返回值,arg3:包路径 (public * com.a.b) **该匹配可以代替所有的执行点 如下**
 
 - `@Before` 前置通知
 - `@After()` 执行之后
