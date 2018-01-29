@@ -152,6 +152,46 @@ pre-clean
 
 ```
 
+> 项目如何讲依赖的包也打包导出
+
+参考 `http://blog.csdn.net/xiao__gui/article/details/47341385`
+
+打包文件并可以直接运行
+
+```
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-jar-plugin</artifactId>
+    <version>2.6</version>
+    <configuration>
+        <archive>
+            <manifest>
+                <addClasspath>true</addClasspath>
+                <classpathPrefix>lib/</classpathPrefix>
+                <mainClass>com.self.study.mybatis.selfmybatis.Test1</mainClass>
+            </manifest>
+        </archive>
+    </configuration>
+</plugin>
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-dependency-plugin</artifactId>
+    <version>2.10</version>
+    <executions>
+        <execution>
+            <id>copy-dependencies</id>
+            <phase>package</phase>
+            <goals>
+                <goal>copy-dependencies</goal>
+            </goals>
+            <configuration>
+                <outputDirectory>${project.build.directory}/lib</outputDirectory>
+            </configuration>
+        </execution>
+    </executions>
+</plugin>
+```
+
 ---
 
 
