@@ -33,6 +33,7 @@ https://github.com/Jactor-Sue/Deepin-Apps-Installation
 
 遇到乱码可以这样解决: /opt/deepinwine/tools/run.sh 修改参数为 `WINE_CMD="LC_ALL=zh_CN.UTF-8 deepin-wine"
 ` 这样
+也可使用 https://github.com/wszqkzqk/deepin-wine-ubuntu 库
 
 搜狗输入法
 
