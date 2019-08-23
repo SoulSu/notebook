@@ -25,3 +25,7 @@ https://github.com/shadowsocks/shadowsocks-qt5
 
 好用的终端 terminator
 
+安装QQ等wine对应的软件
+
+https://github.com/Jactor-Sue/Deepin-Apps-Installation
+
