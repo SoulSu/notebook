@@ -25,6 +25,8 @@ https://github.com/shadowsocks/shadowsocks-qt5
 
 好用的终端 terminator
 
+https://askubuntu.com/questions/829045/how-do-i-install-terminator
+
 安装QQ等wine对应的软件
 
 https://github.com/Jactor-Sue/Deepin-Apps-Installation
