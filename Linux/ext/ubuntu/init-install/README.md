@@ -31,6 +31,9 @@ https://askubuntu.com/questions/829045/how-do-i-install-terminator
 
 https://github.com/Jactor-Sue/Deepin-Apps-Installation
 
+遇到乱码可以这样解决: /opt/deepinwine/tools/run.sh 修改参数为 `WINE_CMD="LC_ALL=zh_CN.UTF-8 deepin-wine"
+` 这样
+
 搜狗输入法
 
 https://pinyin.sogou.com/linux/?r=pinyin
