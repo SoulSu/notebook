@@ -37,3 +37,8 @@ https://pinyin.sogou.com/linux/?r=pinyin
 wps
 
 https://linux.wps.cn
+
+
+代理翻墙配置
+
+https://github.com/FelisCatus/SwitchyOmega
