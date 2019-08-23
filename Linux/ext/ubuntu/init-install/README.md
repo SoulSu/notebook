@@ -29,3 +29,6 @@ https://github.com/shadowsocks/shadowsocks-qt5
 
 https://github.com/Jactor-Sue/Deepin-Apps-Installation
 
+搜狗输入法
+
+https://pinyin.sogou.com/linux/?r=pinyin
